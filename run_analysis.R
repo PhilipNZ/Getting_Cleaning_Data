@@ -148,11 +148,11 @@ codebook[3,] <- c("activity", "Character", "labels of activity","WALKING, LAYING
 #For the rest of variables
 for (k in 4:length(dataFinal[1,]) ) {
     codebook[k,1]  <- names(dataFinal)[k]
-    codebook[k,2]  <- "Real(Double)"
+    codebook[k,2]  <- "Numeric"
     codebook[k,3] <- paste("Group mean of '", substring(names(dataFinal)[k],11), "' according to subject and activity", sep="")
     codebook[k,4] <- "[-1,1]"
     if (grepl("Acc", names(dataFinal)[k] )) {
-        codebook[k,5] <- "g (gravity)"
+        codebook[k,5] <- "g"
         print(codebook[k,5])
     } else 
     {
